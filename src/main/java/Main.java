@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Main {
@@ -17,11 +18,19 @@ public class Main {
 //        driver.navigate().refresh();
 //        driver.navigate().forward();
 
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.cssSelector(".app_logo")).isDisplayed();
+//        driver.get("https://www.saucedemo.com/");
+//        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+//        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+//        driver.findElement(By.id("login-button")).click();
+//        driver.findElement(By.cssSelector(".app_logo")).isDisplayed();
+
+        driver.get("https://the-internet.herokuapp.com/");
+        driver.findElement(By.cssSelector("a[href='/dropdown']")).click();
+        driver.findElement(By.cssSelector("div[class='example'] h3")).isDisplayed();
+        driver.findElement(By.id("dropdown")).click();
+        driver.findElement(By.cssSelector("option[disabled='disabled']")).getAttribute("selected");
+
+        WebElement dropdownElement = driver.findElement(By.id("dropdown"));
 
         driver.quit();
     }
