@@ -24,14 +24,6 @@ public class Main {
 //        driver.findElement(By.id("login-button")).click();
 //        driver.findElement(By.cssSelector(".app_logo")).isDisplayed();
 
-        driver.get("https://the-internet.herokuapp.com/");
-        driver.findElement(By.cssSelector("a[href='/dropdown']")).click();
-        driver.findElement(By.cssSelector("div[class='example'] h3")).isDisplayed();
-        driver.findElement(By.id("dropdown")).click();
-        driver.findElement(By.cssSelector("option[disabled='disabled']")).getAttribute("selected");
-
-        WebElement dropdownElement = driver.findElement(By.id("dropdown"));
-
         driver.quit();
     }
 }
