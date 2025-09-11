@@ -9,7 +9,7 @@ import java.time.Duration;
 public class SelectDropdown {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
 
         driver.get("https://the-internet.herokuapp.com/dropdown");
         driver.manage().window().maximize();
